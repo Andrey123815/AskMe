@@ -1,0 +1,85 @@
+main > .my_container {
+    padding: 80px 15px 0;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.question_text {
+    max-width: 750px;
+}
+
+.question_billboard {
+    margin: 20px 0px;
+    padding: 5px;
+    border: 3px solid gray;
+    border-radius: 10px
+}
+
+.like {
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: auto;
+    padding: auto;
+    width: 60px;
+    height: 30px;
+    color: black;
+    background: white;
+}
+
+.dislike {
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: auto;
+    padding: auto;
+    width: 75px;
+    height: 30px;
+    color: white;
+    background: black;
+}
+
+.avatar {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_page {
+    margin: 0px 5px 0px 500px;
+    padding: 5px;
+}
+
+.page_buttons {
+    padding: 5px;
+    background: white;
+    color: blue;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.popular_tags {
+    margin: 80px 10px;
+    padding: auto;
+}
+
+.best_members {
+    text-align: center;
+    margin: 10px 0px
+}
+
+.article_popular_tags {
+    text-align: center;
+    margin: 0px 0px 20px 0px
+}
+
+.article_best_members {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.answers {
+    margin: auto;
+    padding: auto;
+}
