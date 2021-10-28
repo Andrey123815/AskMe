@@ -1,0 +1,54 @@
+main > .my_container {
+    padding: 80px 15px 0;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.article_popular_tags {
+    text-align: center;
+    margin: 0px 0px 20px 0px
+}
+
+.popular_tags {
+    margin: 80px 10px;
+    padding: auto;
+}
+
+.article_best_members {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.best_members {
+    text-align: center;
+    margin: 10px 0px
+}
+
+.text_area_articles {
+    margin: 30px 0px 10px 45px;
+}
+
+.text_area {
+    margin: 30px 0px 10px 50px;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+.input_source_img_path {
+    margin: 0px 0px 10px 0px;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+.button_choose {
+    margin: 3px;
+}
+
+.buttons {
+    margin: 3px 3px 3px 60px;
+    max-width: 150px;
+}
+
+.articles_margin {
+    margin: 20px 40px;
+}

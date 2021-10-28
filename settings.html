@@ -28,16 +28,23 @@
         }
       }
 
+
+
+
+
+
+
+
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="static/css/add_question.css" rel="stylesheet">
+    <link href="static/css/settings.css" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">AskMe</a>
+        <a class="navbar-brand" href="#">Fixed navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -71,50 +78,87 @@
     <div class="my_container">
         <div class="row">
             <div class="col-8">
-                <h2>New question</h2>
+                <div class="row">
+                    <div class="col-1">
+                        <h2 style="margin: 0px 0px 0px 40px;">Settings:</h2>
+                    </div>
+                    <div class="col-11">
+                        <h2 style="margin: 0px 0px 0px 100px;">Dr. Pepper</h2>
+                    </div>
+                </div>
 
                 <div class="row" style="padding: 20px 20px 5px 60px;">
                     <div class="col-1">
-                        <h3 class="text_area_articles">Title</h3>
+                        <h4 class="text_area_articles">Login</h4>
                     </div>
                     <div class="col-11">
                         <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.."
-                                      style="width: 850px;"></textarea>
+                            <input id="input_new_login" placeholder="enter email.." value="new_login_to_enter"
+                                   style="width: 830px;" class="text_area">
                         </form>
                     </div>
                 </div>
 
                 <div class="row" style="padding: 5px 20px 5px 60px;">
                     <div class="col-1">
-                        <h3 class="text_area_articles">Text</h3>
+                        <h4 class="text_area_articles">Email</h4>
                     </div>
                     <div class="col-11">
                         <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.."
-                                      style="width: 850px; height: 400px;"></textarea>
+                            <input id="input_new_email" placeholder="enter email.." value="technopark@gmail.com"
+                                   style="width: 830px;" class="text_area">
                         </form>
                     </div>
                 </div>
 
                 <div class="row" style="padding: 5px 20px 5px 60px;">
                     <div class="col-1">
-                        <h3 class="text_area_articles">Tags</h3>
+                        <h4 style="margin: 30px 0px 10px 0px;">Nickname</h4>
                     </div>
                     <div class="col-11">
                         <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.." style="width: 850px;"></textarea>
+                            <input id="input_new_nickname" placeholder="enter email.." value="Ivancher_556"
+                                   style="width: 830px;" class="text_area">
                         </form>
                     </div>
                 </div>
 
                 <div class="row">
-                    <button type="submit" value="" id="button_question_push" style="vertical-align: middle;
-                                                margin: 30px 500px; max-width: 150px; background: green; color: white;">
-                        Push Article
-                    </button>
-                </div>
+                    <div class="col-2">
+                        <div class="row">
+                            <h4 style="margin: 30px 0px 10px 15px;">Upload avatar</h4>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <img src="static/img/avatar_5.png" width="120px" height="120px" style="margin: 0px 0px 0px 5px">
+                    </div>
+                    <div class="col-9" style="margin: auto; padding: auto;">
+                        <div class="row">
+                            <div class="row" style="margin: 5px 0px 0px 0px">
+                                <div class="col-4">
+                                    <h5 style="margin: 15px 0px 0px 70px;">Source image:</h5>
+                                </div>
+                                <div class="col-8">
+                                    <form action="" method="post">
+                                        <input type="file" id="input_new_avatar" placeholder="enter email.." value="C:/img_5.png"
+                                               style="margin: 10px 0px 0px 0px; width: 475px;"
+                                               class="input_source_img_path">
+                                    </form>
+                                </div>
+                            </div>
 
+                            <div class="row">
+                                <button type="button" style="vertical-align: middle; margin: 35px 10px 20px 380px;
+                                            width: 180px; background: yellow; color: black;">Choose file
+                                </button>
+                                <button type="submit" style="vertical-align: middle; margin: 35px 20px 20px 10px;
+                                            width: 180px; background: green; color: white;">Save changes
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
 

@@ -28,16 +28,17 @@
         }
       }
 
+
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="static/css/add_question.css" rel="stylesheet">
+    <link href="static/css/authorization.css" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">AskMe</a>
+        <a class="navbar-brand" href="#">Fixed navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -71,50 +72,53 @@
     <div class="my_container">
         <div class="row">
             <div class="col-8">
-                <h2>New question</h2>
-
-                <div class="row" style="padding: 20px 20px 5px 60px;">
-                    <div class="col-1">
-                        <h3 class="text_area_articles">Title</h3>
-                    </div>
-                    <div class="col-11">
-                        <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.."
-                                      style="width: 850px;"></textarea>
-                        </form>
-                    </div>
+                <div class="row">
+                    <h2>Log In</h2>
                 </div>
 
-                <div class="row" style="padding: 5px 20px 5px 60px;">
-                    <div class="col-1">
-                        <h3 class="text_area_articles">Text</h3>
-                    </div>
-                    <div class="col-11">
-                        <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.."
-                                      style="width: 850px; height: 400px;"></textarea>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="row" style="padding: 5px 20px 5px 60px;">
-                    <div class="col-1">
-                        <h3 class="text_area_articles">Tags</h3>
-                    </div>
-                    <div class="col-11">
-                        <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.." style="width: 850px;"></textarea>
-                        </form>
+                <div class="row">
+                    <div class="col-12">
+                        <h4 style="color: red; margin: 30px 0px">Sorry, wrong password! Check it again</h4>
                     </div>
                 </div>
 
                 <div class="row">
-                    <button type="submit" value="" id="button_question_push" style="vertical-align: middle;
-                                                margin: 30px 500px; max-width: 150px; background: green; color: white;">
-                        Push Article
-                    </button>
+                    <div class="col-1">
+                        <h4>Login</h4>
+                    </div>
+                    <div class="col-11">
+                        <form action="" method="post">
+                            <input id="enter_login" placeholder="enter your login.."
+                                   style="width: 630px; margin: 0px 0px 0px 40px" class="text_area">
+                        </form>
+                    </div>
                 </div>
 
+                <div class="row"></div>
+
+                <div class="row">
+                    <div class="col-1">
+                        <h4>Password</h4>
+                    </div>
+                    <div class="col-11">
+                        <form action="" method="post">
+                            <input id="enter_password" placeholder="enter password.."
+                                   style="width: 630px; margin: 0px 0px 0px 40px;" class="text_area">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5" style="margin: 30px 0px 0px 80px;">
+                        <a href="google.com">
+                            <h5>create new account</h5>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" style="margin: 30px 0px 0px 120px; padding: auto;
+                                                color: white; background: green; width: 100px;">Log in!
+                        </button>
+                    </div>
+                </div>
             </div>
 
 

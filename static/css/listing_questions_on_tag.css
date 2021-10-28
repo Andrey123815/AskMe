@@ -9,7 +9,7 @@ main > .my_container {
 }
 
 .question_billboard {
-    margin: 10px 0px;
+    margin: 20px 0px;
     padding: 5px;
     border: 3px solid gray;
     border-radius: 10px
@@ -46,9 +46,22 @@ main > .my_container {
     flex-direction: column;
 }
 
+.form_page {
+    margin: 0px 5px 0px 500px;
+    padding: 5px;
+}
+
+.page_buttons {
+    padding: 5px;
+    background: white;
+    color: blue;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
 .article_popular_tags {
     text-align: center;
-    margin: 15px 0px 20px 10px
+    margin: 0px 0px 20px 0px
 }
 
 .popular_tags {
@@ -66,13 +79,7 @@ main > .my_container {
     margin: 10px 0px
 }
 
-.break_line {
-    margin: 10px 0px;
-    border: 6px solid gray;
-}
-
-.text_area {
-    margin: 10px 0px 7px 10px;
-    border: 3px solid gray;
-    border-radius: 5px;
+.answers {
+    margin: auto;
+    padding: auto;
 }
