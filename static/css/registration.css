@@ -34,21 +34,7 @@ main > .my_container {
     border-radius: 5px;
 }
 
-.input_source_img_path {
-    margin: 0px 0px 10px 0px;
-    border: 3px solid gray;
-    border-radius: 5px;
-}
-
-.button_choose {
-    margin: 3px;
-}
-
-.buttons {
-    margin: 3px 3px 3px 60px;
-    max-width: 150px;
-}
-
-.articles_margin {
-    margin: 20px 40px;
+h4 {
+    text-align: right;
+    margin: 30px 0px 10px 0px;
 }

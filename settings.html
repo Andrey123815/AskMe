@@ -35,6 +35,8 @@
 
 
 
+
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -44,81 +46,87 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <div class="col-1">
+            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div class="col-3">
+                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1" style="text-align: right;">
+                <a class="navbar-brand" style="font-size: 20px, text-align: right;">Profile</a>
+            </div>
+            <div class="col-1" style="text-align: center">
+                <img src="../static/img/avatar_5.png" height="50px" width="50px">
+            </div>
             <div>
-                <a href="registration.com" style="margin: 0px 10px">Register</a>
-                <a href="registration.com">Log in</a>
+                <a class="nav-link font-20" href="#">settings</a>
+            </div>
+            <div>
+                <a class="nav-link font-20" href="#">log out</a>
             </div>
         </div>
+    </div>
     </div>
 </nav>
 
 
 <main class="flex-shrink-0">
     <div class="my_container">
-        <div class="row">
+        <div class="row" style="margin-top: 20px;">
             <div class="col-8">
                 <div class="row">
-                    <div class="col-1">
-                        <h2 style="margin: 0px 0px 0px 40px;">Settings:</h2>
+                    <div class="col-2">
+                        <h2>Settings:</h2>
                     </div>
-                    <div class="col-11">
-                        <h2 style="margin: 0px 0px 0px 100px;">Dr. Pepper</h2>
+                    <div class="col-10">
+                        <h2>Dr. Pepper</h2>
                     </div>
                 </div>
 
-                <div class="row" style="padding: 20px 20px 5px 60px;">
-                    <div class="col-1">
+                <div class="row">
+                    <div class="col-2">
                         <h4 class="text_area_articles">Login</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-8">
                         <form action="" method="post">
                             <input id="input_new_login" placeholder="enter email.." value="new_login_to_enter"
-                                   style="width: 830px;" class="text_area">
+                                   class="text_area">
                         </form>
                     </div>
                 </div>
 
-                <div class="row" style="padding: 5px 20px 5px 60px;">
-                    <div class="col-1">
+                <div class="row">
+                    <div class="col-2">
                         <h4 class="text_area_articles">Email</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-8">
                         <form action="" method="post">
                             <input id="input_new_email" placeholder="enter email.." value="technopark@gmail.com"
-                                   style="width: 830px;" class="text_area">
+                                   class="text_area">
                         </form>
                     </div>
                 </div>
 
-                <div class="row" style="padding: 5px 20px 5px 60px;">
-                    <div class="col-1">
-                        <h4 style="margin: 30px 0px 10px 0px;">Nickname</h4>
+                <div class="row">
+                    <div class="col-2">
+                        <h4 class="text_area_articles">Nickname</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-8">
                         <form action="" method="post">
                             <input id="input_new_nickname" placeholder="enter email.." value="Ivancher_556"
-                                   style="width: 830px;" class="text_area">
+                                   class="text_area">
                         </form>
                     </div>
                 </div>
@@ -130,7 +138,7 @@
                         </div>
                     </div>
                     <div class="col-1">
-                        <img src="static/img/avatar_5.png" width="120px" height="120px" style="margin: 0px 0px 0px 5px">
+                        <img src="static/img/avatar_5.png" width="120px" height="120px" style="margin: 15px 0px 0px 5px">
                     </div>
                     <div class="col-9" style="margin: auto; padding: auto;">
                         <div class="row">
@@ -140,7 +148,8 @@
                                 </div>
                                 <div class="col-8">
                                     <form action="" method="post">
-                                        <input type="file" id="input_new_avatar" placeholder="enter email.." value="C:/img_5.png"
+                                        <input type="file" id="input_new_avatar" placeholder="enter email.."
+                                               value="C:/img_5.png"
                                                style="margin: 10px 0px 0px 0px; width: 475px;"
                                                class="input_source_img_path">
                                     </form>

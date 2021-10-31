@@ -37,32 +37,38 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <div class="col-1">
+            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div class="col-3">
+                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1" style="text-align: right;">
+                <a class="navbar-brand" style="font-size: 20px, text-align: right;">Profile</a>
+            </div>
+            <div class="col-1" style="text-align: center">
+                <img src="../static/img/avatar_5.png" height="50px" width="50px">
+            </div>
             <div>
-                <a href="registration.com" style="margin: 0px 10px">Register</a>
-                <a href="registration.com">Log in</a>
+                <a class="nav-link font-20" href="#">settings</a>
+            </div>
+            <div>
+                <a class="nav-link font-20" href="#">log out</a>
             </div>
         </div>
+    </div>
     </div>
 </nav>
 
@@ -71,8 +77,15 @@
     <div class="my_container">
         <div class="row">
             <div class="col-8">
-                <div class="row">
-                    <h2>New questions</h2>
+                <div class="row" style="margin: 20px 0px 20px 0px;">
+                    <div class="col-4">
+                        <h2>New questions</h2>
+                    </div>
+                    <div class="col-6">
+                        <h4>
+                            <a href="#" style="vertical-align: middle; margin: 30px 15px 20px 0px;">Hot Questions</a>
+                        </h4>
+                    </div>
                 </div>
 
                 <div class="row question_billboard">
@@ -211,26 +224,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <form action="submit" class="form_page">
-                            <button class="page_buttons">
-                                <h5><<</h5>
-                            </button>
-                            <button class="page_buttons">
-                                <h5>1</h5>
-                            </button>
-                            <button class="page_buttons">
-                                <h5>2</h5>
-                            </button>
-                            <button class="page_buttons">
-                                <h5>3</h5>
-                            </button>
-                            <button class="page_buttons">
-                                <h5>>></h5>
-                            </button>
-                        </form>
+                <div class="row" style="margin: 3px 0px 0px 0px;">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <nav aria-label="Page navigation example" id="paginator">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
                     </div>
+                    <div class="col-4"></div>
                 </div>
             </div>
 

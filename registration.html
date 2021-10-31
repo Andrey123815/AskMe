@@ -42,6 +42,7 @@
 
 
 
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -51,42 +52,40 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <div class="col-1">
+            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <div>
-                <a href="registration.com" style="margin: 0px 10px">Register</a>
-                <a href="registration.com">Log in</a>
+            <div class="col-3">
+                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-1">
+                <a href="registration.com" style="margin: 0px 10px" class="login_register">Register</a>
+            </div>
+            <div class="col-1">
+                <a href="registration.com" class="login_register">Log in</a>
             </div>
         </div>
     </div>
 </nav>
 
-
 <main class="flex-shrink-0">
     <div class="my_container">
-        <div class="row">
+        <div class="row" style="margin-top: 20px;">
             <div class="col-8">
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2 main_form">
                         <h2 style="margin: 0px 0px 0px 40px;">Registration:</h2>
                     </div>
                 </div>
@@ -98,10 +97,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <h4 class="text_area_articles">Login</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
                             <input id="input_new_login" placeholder="Enter your login.."
                                    style="width: 430px;" class="text_area">
@@ -110,10 +109,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <h4 class="text_area_articles">Email</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
                             <input id="input_new_email" placeholder="Enter your email.."
                                    style="width: 430px;" class="text_area">
@@ -122,10 +121,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <h4 style="margin: 30px 0px 10px 0px;">Nickname</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
                             <input id="input_new_nickname" placeholder="Enter your nickname.."
                                    style="width: 430px;" class="text_area">
@@ -134,10 +133,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <h4 style="margin: 30px 0px 10px 0px;">Password</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
                             <input id="input_new_password" placeholder="Enter your password.."
                                    style="width: 430px;" class="text_area">
@@ -146,10 +145,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <h4 style="margin: 30px 0px 10px 0px;">Password</h4>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
                             <input id="repeat_password"
                                    placeholder="Repeat your password.."
@@ -170,13 +169,16 @@
                         <form action="" method="post">
                             <input type="file" id="input_new_avatar"
                                    value="C:/img_5.png"
-                                   style="margin: 28px 0px 0px 0px; width: 390px;"
-                                   class="input_source_img_path">
+                                   style="width: 430px;"
+                                   class="text_area">
                         </form>
                         <div class="col-6">
-                            <h6 style="margin: 40px 0px 0px 0px;">Сlicking the button, you confirm the privacy policy
-                                                            of the application and agree to personal data processing</h6>
-                            <button type="submit" style="margin: 30px 0px 0px 120px; width: 150px; background: white" class="buttons">Register!</button>
+                            <h6 style="margin: 30px 0px 0px 50px;">Сlicking the button, you confirm the privacy policy
+                                of the application and agree to personal data processing</h6>
+                            <button type="submit"
+                                    style="margin: 30px 0px 0px 120px; width: 150px; background: green; color: white">
+                                Register!
+                            </button>
                         </div>
 
                     </div>

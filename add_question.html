@@ -28,6 +28,10 @@
         }
       }
 
+
+
+
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -37,84 +41,92 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">AskMe</a>
+        <div class="col-1">
+            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div class="col-3">
+                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1" style="text-align: right;">
+                <a class="navbar-brand" style="font-size: 20px, text-align: right;">Profile</a>
+            </div>
+            <div class="col-1" style="text-align: center">
+                <img src="../static/img/avatar_5.png" height="50px" width="50px">
+            </div>
             <div>
-                <a href="registration.com" style="margin: 0px 10px">Register</a>
-                <a href="registration.com">Log in</a>
+                <a class="nav-link font-20" href="#">settings</a>
+            </div>
+            <div>
+                <a class="nav-link font-20" href="#">log out</a>
             </div>
         </div>
+    </div>
     </div>
 </nav>
 
 
 <main class="flex-shrink-0">
     <div class="my_container">
-        <div class="row">
+        <div class="row title_margin">
             <div class="col-8">
                 <h2>New question</h2>
 
-                <div class="row" style="padding: 20px 20px 5px 60px;">
-                    <div class="col-1">
+                <div class="row" style="padding: 40px 20px 5px 60px;">
+                    <div class="col-2">
                         <h3 class="text_area_articles">Title</h3>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.."
-                                      style="width: 850px;"></textarea>
+                            <textarea name="text_question" class="text_area"
+                                      placeholder="Enter your question text.."></textarea>
                         </form>
                     </div>
                 </div>
 
-                <div class="row" style="padding: 5px 20px 5px 60px;">
-                    <div class="col-1">
+                <div class="row" style="padding: 10px 20px 5px 60px;">
+                    <div class="col-2">
                         <h3 class="text_area_articles">Text</h3>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.."
-                                      style="width: 850px; height: 400px;"></textarea>
+                            <textarea name="text_question" class="text_area"
+                                      placeholder="Enter your question text.." style="height: 300px;"></textarea>
                         </form>
                     </div>
                 </div>
 
                 <div class="row" style="padding: 5px 20px 5px 60px;">
-                    <div class="col-1">
+                    <div class="col-2">
                         <h3 class="text_area_articles">Tags</h3>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <form action="" method="post">
-                            <textarea name="text_question" class="text_area" placeholder="Enter your question text.." style="width: 850px;"></textarea>
+                            <textarea name="text_question" class="text_area"
+                                      placeholder="Enter your question text.."></textarea>
                         </form>
                     </div>
                 </div>
 
                 <div class="row">
-                    <button type="submit" value="" id="button_question_push" style="vertical-align: middle;
-                                                margin: 30px 500px; max-width: 150px; background: green; color: white;">
-                        Push Article
-                    </button>
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <button type="submit" value="" id="button_question_push">
+                            Push Article
+                        </button>
+                    </div>
                 </div>
-
             </div>
 
 

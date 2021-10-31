@@ -28,6 +28,9 @@
         }
       }
 
+
+
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -37,30 +40,29 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <div class="col-1">
+            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <div>
-                <a href="registration.com" style="margin: 0px 10px">Register</a>
-                <a href="registration.com">Log in</a>
+            <div class="col-3">
+                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-1">
+                <a href="registration.com" style="margin: 0px 10px" class="login_register">Register</a>
+            </div>
+            <div class="col-1">
+                <a href="registration.com" class="login_register">Log in</a>
             </div>
         </div>
     </div>
@@ -71,7 +73,6 @@
     <div class="my_container">
         <div class="row">
             <div class="col-8">
-
                 <div class="row" style="margin: 20px 10px">
                     <div class="col-2">
                         <div class="avatar">
@@ -111,6 +112,15 @@
                             <button class="dislike" type="submit">
                                 <h5>Dislike</h5>
                             </button>
+                            <div class="row">
+                                <div class="col-5"></div>
+                                <div class="col-3" style="padding: 4px 10px 0px 2px; text-align: center">
+                                    <h5 class="like_count">100</h5>
+                                </div>
+                                <div class="col-4" style="padding: 4px 4px 0px 12px;">
+                                    <h5 class="dislike_count">100</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -139,6 +149,14 @@
                             <button class="dislike" type="submit">
                                 <h5>Dislike</h5>
                             </button>
+                            <div class="row">
+                                <div class="col-6" style="padding: 4px 4px 0px 4px; text-align: center">
+                                    <h5 class="like_count">100</h5>
+                                </div>
+                                <div class="col-6" style="padding: 4px 4px 0px 4px;">
+                                    <h5 class="dislike_count">100</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -166,6 +184,14 @@
                             <button class="dislike" type="submit">
                                 <h5>Dislike</h5>
                             </button>
+                            <div class="row">
+                                <div class="col-6" style="padding: 4px 4px 0px 4px; text-align: center">
+                                    <h5 class="like_count">100</h5>
+                                </div>
+                                <div class="col-6" style="padding: 4px 4px 0px 4px;">
+                                    <h5 class="dislike_count">100</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -173,7 +199,7 @@
                 </div>
 
                 <div class="col-12">
-                        <textarea rows="5" cols="98" class="text_area" name="answer_text_area" id="answer_text_area"
+                        <textarea class="text_area" name="answer_text_area" id="answer_text_area"
                                   placeholder="Enter your answer here.."></textarea>
                 </div>
 

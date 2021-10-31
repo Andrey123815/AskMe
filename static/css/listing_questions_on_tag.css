@@ -23,7 +23,7 @@ main > .my_container {
     width: 60px;
     height: 30px;
     color: black;
-    background: white;
+    background: green;
 }
 
 .dislike {
@@ -33,8 +33,8 @@ main > .my_container {
     padding: auto;
     width: 75px;
     height: 30px;
-    color: white;
-    background: black;
+    color: black;
+    background: red;
 }
 
 .avatar {
@@ -82,4 +82,29 @@ main > .my_container {
 .answers {
     margin: auto;
     padding: auto;
+}
+
+.title_margin {
+    margin: 15px 0px;
+}
+
+#paginator {
+    margin: auto;
+    padding: auto;
+}
+
+.like:focus {
+    color: white;
+}
+
+.dislike:focus {
+    color: white;
+}
+
+.like_count {
+    color: green;
+}
+
+.dislike_count {
+    color: red;
 }
