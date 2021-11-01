@@ -32,22 +32,17 @@
 
 
 
-
-
-
-
-
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="static/css/settings.css" rel="stylesheet">
+    <link href="static/css/my.css" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
         <div class="col-1">
-            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+            <a class="navbar-brand font-26 align_center" href="#">AskMe</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +50,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="col-3">
-                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+                <a class="nav-link nav-item font-32" href="#">Home</a>
             </div>
             <div class="col-4">
                 <form class="d-flex">
@@ -64,10 +59,10 @@
                 </form>
             </div>
             <div class="col-1"></div>
-            <div class="col-1" style="text-align: right;">
-                <a class="navbar-brand" style="font-size: 20px, text-align: right;">Profile</a>
+            <div class="col-1 align_right">
+                <a class="navbar-brand align_center">Profile</a>
             </div>
-            <div class="col-1" style="text-align: center">
+            <div class="col-1 align_center">
                 <img src="../static/img/avatar_5.png" height="50px" width="50px">
             </div>
             <div>
@@ -78,13 +73,12 @@
             </div>
         </div>
     </div>
-    </div>
 </nav>
 
 
 <main class="flex-shrink-0">
     <div class="my_container">
-        <div class="row" style="margin-top: 20px;">
+        <div class="row margin-top-20">
             <div class="col-8">
                 <div class="row">
                     <div class="col-2">
@@ -102,7 +96,7 @@
                     <div class="col-8">
                         <form action="" method="post">
                             <input id="input_new_login" placeholder="enter email.." value="new_login_to_enter"
-                                   class="text_area">
+                                   class="text_area login_password">
                         </form>
                     </div>
                 </div>
@@ -114,7 +108,7 @@
                     <div class="col-8">
                         <form action="" method="post">
                             <input id="input_new_email" placeholder="enter email.." value="technopark@gmail.com"
-                                   class="text_area">
+                                   class="text_area login_password">
                         </form>
                     </div>
                 </div>
@@ -126,46 +120,36 @@
                     <div class="col-8">
                         <form action="" method="post">
                             <input id="input_new_nickname" placeholder="enter email.." value="Ivancher_556"
-                                   class="text_area">
+                                   class="text_area login_password">
                         </form>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-2">
+                        <h4 class="upload_avatar">Upload img</h4>
+                    </div>
+                    <div class="col-8">
                         <div class="row">
-                            <h4 style="margin: 30px 0px 10px 15px;">Upload avatar</h4>
+                            <div class="col-12">
+                                <form action="" method="post">
+                                    <input type="file" id="input_new_avatar" placeholder="enter email.."
+                                           value="C:/img_5.png"
+                                           class="text_area login_password avatar_path">
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-1">
-                        <img src="static/img/avatar_5.png" width="120px" height="120px" style="margin: 15px 0px 0px 5px">
+                </div>
+                <div class="row">
+                    <div class="col-2 align_right">
+                        <img src="static/img/avatar_5.png" width="120px" height="120px" class="break_line">
                     </div>
-                    <div class="col-9" style="margin: auto; padding: auto;">
-                        <div class="row">
-                            <div class="row" style="margin: 5px 0px 0px 0px">
-                                <div class="col-4">
-                                    <h5 style="margin: 15px 0px 0px 70px;">Source image:</h5>
-                                </div>
-                                <div class="col-8">
-                                    <form action="" method="post">
-                                        <input type="file" id="input_new_avatar" placeholder="enter email.."
-                                               value="C:/img_5.png"
-                                               style="margin: 10px 0px 0px 0px; width: 475px;"
-                                               class="input_source_img_path">
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <button type="button" style="vertical-align: middle; margin: 35px 10px 20px 380px;
-                                            width: 180px; background: yellow; color: black;">Choose file
-                                </button>
-                                <button type="submit" style="vertical-align: middle; margin: 35px 20px 20px 10px;
-                                            width: 180px; background: green; color: white;">Save changes
-                                </button>
-                            </div>
-
-                        </div>
+                    <div class="col-2"></div>
+                    <div class="col-7">
+                        <button type="submit" class="button_save_changes">
+                            Save changes
+                        </button>
                     </div>
                 </div>
             </div>
@@ -174,12 +158,13 @@
             <div class="col-4">
                 <h2 class="article_popular_tags">Popular tags</h2>
                 <h4>
-                    <a href="google.com" style="margin: 10px">Techopark</a>
-                    <a href="google.com" style="margin: 10px">VK-education</a>
-                    <a href="google.com" style="margin: 10px">New-programs</a>
-                    <a href="google.com" style="margin: 10px">Negative</a>
-                    <a href="google.com" style="margin: 10px">Future</a>
-                    <a href="google.com" style="margin: 10px">How-to-live</a>
+                    <a href="google.com">Techopark</a>
+                    <a href="google.com">VK-education</a>
+                    <a href="google.com">New-programs</a>
+                    <a href="google.com">Positive</a>
+                    <a href="google.com">Negative</a>
+                    <a href="google.com">Future</a>
+                    <a href="google.com">How-to-live</a>
                 </h4>
                 <h2 class="article_best_members">Best Members</h2>
                 <h4>

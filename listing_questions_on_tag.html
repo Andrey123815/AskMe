@@ -14,6 +14,8 @@
     <!-- Bootstrap core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <style>
+
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -29,21 +31,17 @@
       }
 
 
-
-
-
-
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="static/css/listing_questions_on_tag.css" rel="stylesheet">
+    <link href="static/css/my.css" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
         <div class="col-1">
-            <a class="navbar-brand" href="#" style="font-size: 26px; text-align: center;">AskMe</a>
+            <a class="navbar-brand font-26 align_center" href="#">AskMe</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +49,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="col-3">
-                <a class="nav-link nav-item" href="#" style="font-size: 32px;">Home</a>
+                <a class="nav-link nav-item font-32" href="#">Home</a>
             </div>
             <div class="col-4">
                 <form class="d-flex">
@@ -60,10 +58,10 @@
                 </form>
             </div>
             <div class="col-1"></div>
-            <div class="col-1" style="text-align: right;">
-                <a class="navbar-brand" style="font-size: 20px, text-align: right;">Profile</a>
+            <div class="col-1 align_right">
+                <a class="navbar-brand align_center">Profile</a>
             </div>
-            <div class="col-1" style="text-align: center">
+            <div class="col-1 align_center">
                 <img src="../static/img/avatar_5.png" height="50px" width="50px">
             </div>
             <div>
@@ -74,7 +72,6 @@
             </div>
         </div>
     </div>
-    </div>
 </nav>
 
 
@@ -84,10 +81,10 @@
             <div class="col-8">
                 <div class="row">
                     <div class="col-1">
-                        <h2 style="margin: 0px 0px 0px 40px;">Tag:</h2>
+                        <h2>Tag:</h2>
                     </div>
                     <div class="col-11">
-                        <h2 style="margin: 0px 0px 0px 20px; color: #6d32a8;">#success</h2>
+                        <h2 class="search_tag">#success</h2>
                     </div>
                 </div>
 
@@ -132,42 +129,40 @@
                     <div class="row">
                         <div class="col-8"></div>
                         <div class="col-2">
-                            <h5 style="text-align: right;">Rating:</h5>
+                            <h5 class="align_right">Rating:</h5>
                         </div>
-                        <div class="col-1" style="padding: 0px 4px 0px 4px; text-align: center">
+                        <div class="col-1 align_center pad-0-4">
                             <h5 class="like_count">100</h5>
                         </div>
-                        <div class="col-1" style="padding: 0px 4px 0px 12px;">
+                        <div class="col-1 pad-0-12">
                             <h5 class="dislike_count">100</h5>
                         </div>
                     </div>
 
-                    <div class="row" style="margin: 3px; padding: 3px; border: 3px solid gray; border-radius: 8px">
+                    <div class="row graph_answer_post">
                         <div class="col-2">
                             Answer user post:
                         </div>
                     </div>
                 </div>
 
-
                 <div class="row question_billboard">
                     <div class="col-2">
                         <div class="avatar">
-                            <h5>Agent_007</h5>
-                            <img src="static/img/avatar_1.jpg" alt="Agent_007" width="80" height="80">
+                            <h5>Dmitrich_006</h5>
+                            <img src="static/img/avatar_4.jpg" alt="Dmitrich_006" width="80" height="80">
                         </div>
                     </div>
 
                     <div class="col-8 question_text">
                         Выделяют две основные категории HTML-элементов, которые соответствуют типам их содержимого и
-                        поведению в структуре веб-страницы — блочные и строчные элементы. С помощью блочных
-                        элементов
+                        поведению в структуре веб-страницы — блочные и строчные элементы. С помощью блочных элементов
                         можно создавать структуру веб-страницы, строчные элементы используются для форматирования
                         текстовых фрагментов (за исключением элементов и других)...
                     </div>
 
-                    <div class="col-2">
-                        <a href="google.com" style="margin: auto; padding: auto">#answers(3)</a>
+                    <div class="col-1">
+                        <a href="google.com" class="answers">#answers(3)</a>
                     </div>
 
                     <div class="row">
@@ -183,7 +178,7 @@
                             <button class="like" type="submit">
                                 <h5>Like</h5>
                             </button>
-                            <button class="dislike button">
+                            <button class="dislike" type="submit">
                                 <h5>Dislike</h5>
                             </button>
                         </div>
@@ -192,42 +187,40 @@
                     <div class="row">
                         <div class="col-8"></div>
                         <div class="col-2">
-                            <h5 style="text-align: right;">Rating:</h5>
+                            <h5 class="align_right">Rating:</h5>
                         </div>
-                        <div class="col-1" style="padding: 0px 4px 0px 4px; text-align: center">
+                        <div class="col-1 align_center pad-0-4">
                             <h5 class="like_count">100</h5>
                         </div>
-                        <div class="col-1" style="padding: 0px 4px 0px 12px;">
+                        <div class="col-1 pad-0-12">
                             <h5 class="dislike_count">100</h5>
                         </div>
                     </div>
 
-                    <div class="row" style="margin: 3px; padding: 3px; border: 3px solid gray; border-radius: 8px">
+                    <div class="row graph_answer_post">
                         <div class="col-2">
                             Answer user post:
                         </div>
                     </div>
                 </div>
 
-
                 <div class="row question_billboard">
                     <div class="col-2">
                         <div class="avatar">
-                            <h5>Agent_007</h5>
-                            <img src="static/img/avatar_1.jpg" alt="Agent_007" width="80" height="80">
+                            <h5>Dmitrich_006</h5>
+                            <img src="static/img/avatar_4.jpg" alt="Dmitrich_006" width="80" height="80">
                         </div>
                     </div>
 
                     <div class="col-8 question_text">
                         Выделяют две основные категории HTML-элементов, которые соответствуют типам их содержимого и
-                        поведению в структуре веб-страницы — блочные и строчные элементы. С помощью блочных
-                        элементов
+                        поведению в структуре веб-страницы — блочные и строчные элементы. С помощью блочных элементов
                         можно создавать структуру веб-страницы, строчные элементы используются для форматирования
                         текстовых фрагментов (за исключением элементов и других)...
                     </div>
 
-                    <div class="col-2">
-                        <a href="google.com" style="margin: auto; padding: auto">#answers(3)</a>
+                    <div class="col-1">
+                        <a href="google.com" class="answers">#answers(3)</a>
                     </div>
 
                     <div class="row">
@@ -243,7 +236,7 @@
                             <button class="like" type="submit">
                                 <h5>Like</h5>
                             </button>
-                            <button class="dislike button">
+                            <button class="dislike" type="submit">
                                 <h5>Dislike</h5>
                             </button>
                         </div>
@@ -252,22 +245,23 @@
                     <div class="row">
                         <div class="col-8"></div>
                         <div class="col-2">
-                            <h5 style="text-align: right;">Rating:</h5>
+                            <h5 class="align_right">Rating:</h5>
                         </div>
-                        <div class="col-1" style="padding: 0px 4px 0px 4px; text-align: center">
+                        <div class="col-1 align_center pad-0-4">
                             <h5 class="like_count">100</h5>
                         </div>
-                        <div class="col-1" style="padding: 0px 4px 0px 12px;">
+                        <div class="col-1 pad-0-12">
                             <h5 class="dislike_count">100</h5>
                         </div>
                     </div>
 
-                    <div class="row" style="margin: 3px; padding: 3px; border: 3px solid gray; border-radius: 8px">
+                    <div class="row graph_answer_post">
                         <div class="col-2">
                             Answer user post:
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-4"></div>
                     <div class="col-4">
