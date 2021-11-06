@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <div class="col-1">
+            <a class="navbar-brand font-26 align_center" href="#">AskMe</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="col-3">
+                <a class="nav-link nav-item font-32" href="#">Home</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            {% if user.is_authenticated %}
+                <div class="col-1"></div>
+                <div class="col-1 align_right">
+                    <a class="navbar-brand align_center">Profile</a>
+                </div>
+                <div class="col-1 align_center">
+                    <img src="static/img/avatar_5.png" height="50px" width="50px">
+                </div>
+                <div>
+                    <a class="nav-link font-20" href="#">Settings</a>
+                </div>
+                <div>
+                    <a class="nav-link font-20" href="#">Log out</a>
+                </div>
+            {% else %}
+                <div class="col-3"></div>
+                <div class="col-1">
+                    <a href="registration.com margin-0-10" class="login_register">Register</a>
+                </div>
+                <div class="col-1">
+                    <a href="registration.com" class="login_register">Log in</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</nav>

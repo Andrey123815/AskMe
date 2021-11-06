@@ -1,0 +1,38 @@
+<div class="row question_billboard">
+    <div class="col-2">
+        <div class="avatar">
+            <h5>{{ answer.author }}</h5>
+            <img src="static/img/avatar_3.jpg" alt="Ivan_cher_556" width="80" height="80">
+        </div>
+    </div>
+
+    <div class="col-8 question_text">
+        {{ answer.text }}
+    </div>
+
+    <div class="col-2">
+        <button class="like" type="submit">
+            <h5>Like</h5>
+        </button>
+        <button class="dislike" type="submit">
+            <h5>Dislike</h5>
+        </button>
+        <div class="row">
+            <div class="col-6 align_center pad-4-4-0-4">
+                <h5 class="like_count">{{ answer.like_count }}</h5>
+            </div>
+            <div class="col-6 pad-4-4-0-4">
+                <h5 class="dislike_count">{{ answer.dislike_count }}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10"></div>
+        <div class="col-2 align_right">
+            <div>
+                <input type="checkbox" name="correct_answer" checked>
+                <label>Correct</label>
+            </div>
+        </div>
+    </div>
+</div>

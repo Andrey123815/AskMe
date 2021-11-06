@@ -322,3 +322,11 @@ h4 > a {
 .margin-top-3 {
     margin-top: 3px;
 }
+
+.margin-10 {
+    margin: 40px 0px 40px 0px;
+}
+
+.align-left {
+    text-align: left;
+}

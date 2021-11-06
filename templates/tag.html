@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Log In {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-1">
+        <h2>Tag:</h2>
+    </div>
+    <div class="col-11">
+        <h2 class="search_tag">#success</h2>
+    </div>
+    {% for question in questions %}
+    {% include 'include/question.html' %}
+    {% endfor %}
+    {% include 'include/paginator.html'%}
+</div>
+
+{% endblock %}

@@ -134,8 +134,7 @@ dmypy.json
 .AppleDouble
 .LSOverride
 
-#
+# NodeJS files
 node_modules/
 package-lock.json
 package.json
-cmake-build-debug/

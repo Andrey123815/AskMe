@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %} Settings {% endblock %}
+
+{% block content %}
+
+<h2>New question</h2>
+<div class="row">
+    <div class="col-2">
+        <h3 class="text_area_articles">Title</h3>
+    </div>
+    <div class="col-10">
+        <form action="" method="post">
+            <textarea name="text_question" class="text_area login_password"
+                                      placeholder="Enter your question text.."></textarea>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h3 class="text_area_articles">Text</h3>
+    </div>
+    <div class="col-10">
+        <form action="" method="post">
+            <textarea id="text_form" name="text_question" class="text_area login_password"
+                                      placeholder="Enter your question text.."></textarea>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h3 class="text_area_articles">Tags</h3>
+    </div>
+    <div class="col-10">
+        <form action="" method="post">
+            <textarea name="text_question" class="text_area login_password"
+                                      placeholder="Enter your question text.."></textarea>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <button type="submit" value="" id="button_question_push" style="margin-top: 20px;">
+            Push Article
+        </button>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+{% endblock %}

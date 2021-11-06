@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-2">
+        <div class="avatar">
+            <h4 style="margin-top: 0px;">{{ main_question.author }}</h4>
+            <img src="static/img/avatar_4.jpg" alt="Dmitrich_006" width="120" height="120">
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="row">
+            <h3>{{ main_question.title }}</h3>
+        </div>
+        <div class="row question_text">
+            <h6>
+                {{ main_question.text }}
+            </h6>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h5>Tags:</h5>
+            </div>
+            <div class="col-5">
+                <h5>
+                    <a href="google.com">#success</a>, <a href="google.com">#technopark</a>, <a
+                        href="google.com">#vk</a>
+                    , <a href="google.com">#study</a>
+                </h5>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <div class="align_center">
+                    <button class="like" type="submit">
+                        <h5>Like</h5>
+                    </button>
+                    <button class="dislike" type="submit">
+                        <h5>Dislike</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-9"></div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="like_count align_right margin_like_count">{{ main_question.like_count }}</h5>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="dislike_count">{{ main_question.dislike_count }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

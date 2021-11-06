@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} index {% endblock %}
+
+{% block content %}
+
+<div class="row margin-top-20">
+    <div class="col-4">
+        <h2>New questions</h2>
+    </div>
+    <div class="col-6">
+        <h2>
+            <a href="#">Hot Questions</a>
+        </h2>
+    </div>
+    {% for question in questions %}
+        {% include 'include/question.html' %}
+    {% endfor %}
+    {% include 'include/paginator.html'%}
+</div>
+
+{% endblock %}
