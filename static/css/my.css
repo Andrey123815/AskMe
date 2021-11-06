@@ -11,7 +11,6 @@ main > .my_container {
 .like {
     border: 2px solid black;
     border-radius: 6px;
-    margin: auto;
     padding: auto;
     width: 60px;
     height: 30px;
@@ -22,7 +21,6 @@ main > .my_container {
 .dislike {
     border: 2px solid black;
     border-radius: 6px;
-    margin: auto;
     padding: auto;
     width: 75px;
     height: 30px;

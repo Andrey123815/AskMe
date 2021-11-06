@@ -8,7 +8,7 @@
 
     <div class="col-8 question_text">
         <div class="row">
-            <a href="#" class="font-26 align_left">{{ question.title }}</a>
+            <a href="{% url 'question' %}" class="font-26 align_left">{{ question.title }}</a>
         </div>
         <div class="row">
             {{ question.text }}
@@ -16,7 +16,7 @@
     </div>
 
     <div class="col-1">
-        <a href="google.com" class="answers">#answers({{ question.answers_count }})</a>
+        <a href="{% url 'question' %}" class="answers">#answers({{ question.answers_count }})</a>
     </div>
 
     <div class="row">
@@ -24,16 +24,16 @@
             <h5>Tags:</h5>
         </div>
         <div class="col-9">
-            <a href="google.com">#success</a>, <a href="google.com">#technopark</a>, <a
-                href="google.com">#vk</a>
-            , <a href="google.com">#study</a>
+            <a href="{% url 'tag' %}">#success</a>, <a href="{% url 'tag' %}">#technopark</a>, <a
+                href="{% url 'tag' %}">#vk</a>
+            , <a href="{% url 'tag' %}">#study</a>
         </div>
         <div class="col-2">
             <div class="row">
-                <button class="like" type="submit">
+                <button class="like" type="submit" style="margin: 3px;">
                     <h5>Like</h5>
                 </button>
-                <button class="dislike pad-0-4" type="submit">
+                <button class="dislike pad-0-4" type="submit" style="margin: 3px;">
                     <h5>Dislike</h5>
                 </button>
             </div>

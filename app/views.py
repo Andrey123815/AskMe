@@ -1,3 +1,4 @@
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import render
 
 questions = [
@@ -5,7 +6,7 @@ questions = [
         "title": f"How to moon like {i}",
         "author": "Ivancher_556",
         "avatar_source_img": "C://img",
-        "answers_count": f"{i + 1}",
+        "answers_count": i + 1,
         "text": "Выделяют две основные категории HTML-элементов, которые соответствуют типам их содержимого"
                 "и поведению в структуре веб-страницы — блочные и строчные элементы. "
                 "С помощью блочных элементов можно создавать структуру веб-страницы, строчные элементы"
@@ -15,12 +16,15 @@ questions = [
         "references": ["#", "#", "#", "#"],
         "like_count": 100,
         "dislike_count": 100
-    } for i in range(3)
+    } for i in range(100)
 ]
 
 
 def index(request):
-    return render(request, 'index.html', {'questions': questions})
+    paginator = Paginator(questions, 5)
+    page = request.GET.get('page')
+    content = paginator.get_page(page)
+    return render(request, 'index.html', {'questions': content})
 
 
 def ask(request):
