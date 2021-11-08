@@ -3,106 +3,108 @@
 
 {% block content %}
 
-<div class="row">
-	<div class="col-6">
-		<div>
-			<h3>Registration:</h3>
-		</div>
-		<div class="align_right">
-			<h5 class="error_email_registered">Sorry, this email address already registered</h5>
-		</div>
-	</div>
+<form method="post" novalidate enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <h3>Registration:</h3>
+            </div>
+            <div class="align_right">
+                <h5 class="error_email_registered">Sorry, this email address already registered</h5>
+            </div>
+        </div>
 
-	<div class="col-2"></div>
+        <div class="col-2"></div>
 
-	<div class="col-2">
-		<h6>Selected avatar:</h6>
-		<img src="static/img/avatar_5.png" width="100" height="100">
-	</div>
-</div>
+        <div class="col-2">
+            <h6>Selected avatar:</h6>
+            <img src="static/img/avatar_5.png" width="100" height="100">
+        </div>
+    </div>
 
-<div class="row">
-	<div class="col-3">
-		<h4 class="text_area_articles">Login</h4>
-	</div>
-	<div class="col-8">
-		<form action="" method="post">
-			<input placeholder="Enter your login.." class="text_area login_password">
-		</form>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <h4 class="text_area_articles">Login</h4>
+        </div>
+        <div class="col-8">
+            <form action="" method="post">
+                <input placeholder="Enter your login.." class="text_area login_password">
+            </form>
+        </div>
+    </div>
 
-<div class="row">
-	<div class="col-3">
-		<h4 class="text_area_articles">Email</h4>
-	</div>
-	<div class="col-8">
-		<form action="" method="post">
-			<input placeholder="Enter your email.." class="text_area login_password">
-		</form>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <h4 class="text_area_articles">Email</h4>
+        </div>
+        <div class="col-8">
+            <form action="" method="post">
+                <input placeholder="Enter your email.." class="text_area login_password">
+            </form>
+        </div>
+    </div>
 
-<div class="row">
-	<div class="col-3">
-		<h4 class="text_area_articles">Nickname</h4>
-	</div>
-	<div class="col-8">
-		<form action="" method="post">
-			<input placeholder="Enter your nickname.." class="text_area login_password">
-		</form>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <h4 class="text_area_articles">Nickname</h4>
+        </div>
+        <div class="col-8">
+            <form action="" method="post">
+                <input placeholder="Enter your nickname.." class="text_area login_password">
+            </form>
+        </div>
+    </div>
 
-<div class="row">
-	<div class="col-3">
-		<h4 class="text_area_articles">Password</h4>
-	</div>
-	<div class="col-8">
-		<form action="" method="post">
-			<input placeholder="Enter your password.." class="text_area login_password">
-		</form>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <h4 class="text_area_articles">Password</h4>
+        </div>
+        <div class="col-8">
+            <form action="" method="post">
+                <input placeholder="Enter your password.." class="text_area login_password">
+            </form>
+        </div>
+    </div>
 
-<div class="row">
-	<div class="col-3">
-		<h4 class="text_area_articles">Password</h4>
-	</div>
-	<div class="col-8">
-		<form action="" method="post">
-			<input placeholder="Repeat your password.." class="text_area login_password">
-		</form>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <h4 class="text_area_articles">Password</h4>
+        </div>
+        <div class="col-8">
+            <form action="" method="post">
+                <input placeholder="Repeat your password.." class="text_area login_password">
+            </form>
+        </div>
+    </div>
 
 
-<div class="row">
-	<div class="col-3">
-		<h4 class="text_area_articles">Upload avatar</h4>
-	</div>
-	<div class="col-8">
-		<form action="" method="post">
-			<input type="file" id="input_new_avatar"
-				   value="C:/img_5.png"
-				   class="text_area login_password">
-		</form>
-	</div>
-	<div class="row">
-		<div class="col-3"></div>
-		<div class="col-8 align_center">
-			<h6 class="align_center text_confirm">Сlicking the button, you confirm the privacy policy
-				of the application and agree to personal data processing</h6>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-5"></div>
-		<div class="col-7">
-			<button type="submit" class="button_register align_center">
-				Register!
-			</button>
-		</div>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <h4 class="text_area_articles">Upload avatar</h4>
+        </div>
+        <div class="col-8">
+            <form action="" method="post">
+                <input type="file" id="input_new_avatar"
+                       value="C:/img_5.png"
+                       class="text_area login_password">
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-8 align_center">
+                <h6 class="align_center text_confirm">Сlicking the button, you confirm the privacy policy
+                    of the application and agree to personal data processing</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+                <button type="submit" class="button_register align_center">
+                    Register!
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
 
 {% endblock %}

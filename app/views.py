@@ -1,92 +1,105 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import render
-
-questions = [
-    {
-        "title": f"How to moon like {i}",
-        "author": "Ivancher_556",
-        "avatar_source_img": "C://img",
-        "answers_count": i + 1,
-        "text": "Выделяют две основные категории HTML-элементов, которые соответствуют типам их содержимого"
-                "и поведению в структуре веб-страницы — блочные и строчные элементы. "
-                "С помощью блочных элементов можно создавать структуру веб-страницы, строчные элементы"
-                "используются для форматирования текстовых фрагментов (за исключением элементов и других)...",
-        "tags_count": 4,
-        "tags": ["success", "technopark", "vk", "study"],
-        "references": ["#", "#", "#", "#"],
-        "like_count": 100,
-        "dislike_count": 100
-    } for i in range(100)
-]
+from app.models import *
 
 
-def index(request):
-    paginator = Paginator(questions, 5)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
-    return render(request, 'index.html', {'questions': content})
+# def paginate(objects_list, request, limit=2):
+#     paginator = Paginator(objects_list, limit)
+#     page_num = request.GET.get('page')
+#
+#     return paginator.get_page(page_num)
+#
+#
+# def new_questions(request):
+#
+#
+#
+# def index(request):
+#     paginator = Paginator(questions, 5)
+#     page = request.GET.get('page')
+#     content = paginator.get_page(page)
+#     return render(request, 'index.html', {'questions': content})
+#
+#
+# def ask(request):
+#     return render(request, 'ask.html')
+#
+#
+# def question(request):
+#     return render(request, 'one_question_page.html', {'main_questions': main_questions, 'answers': answers})
+#
+#
+# def tag(request):
+#     return render(request, 'tag.html', {'questions': questions})
+#
+#
+# def settings(request):
+#     return render(request, 'settings.html', {'settings': settings})
+#
+#
+# def login(request):
+#     return render(request, 'login.html')
+#
+#
+# def signup(request):
+#     return render(request, 'signup.html')
 
 
-def ask(request):
-    return render(request, 'ask.html')
+def paginate(objects_list, request, limit=3):
+    paginator = Paginator(objects_list, limit)
+    page_num = request.GET.get('page')
+
+    return paginator.get_page(page_num)
 
 
-main_questions = [
-    {
-        "title": f"How to moon like {i}?",
-        "author": "Ivancher_556",
-        "avatar_source_img": "C://img",
-        "text": "Выделяют две основные категории HTML-элементов, которые соответствуют типам их содержимого"
-                "и поведению в структуре веб-страницы — блочные и строчные элементы. "
-                "С помощью блочных элементов можно создавать структуру веб-страницы, строчные элементы"
-                "используются для форматирования текстовых фрагментов (за исключением элементов и других)...",
-        "tags_count": 4,
-        "tags": ["success", "technopark", "vk", "study"],
-        "references": ["#", "#", "#", "#"],
-        "like_count": 100,
-        "dislike_count": 100
-    } for i in range(1)
-]
+def new_questions(request):
+    questions_page = paginate(Question.objects.all(), request)
+    popular_tags = Tag.objects.popular_tags()
 
-answers = [
-    {
-        "author": "Agent_007",
-        "avatar_source_img": "C://img",
-        "text": "Выделяют две основные категории HTML-элементов, которые соответствуют типам их содержимого"
-                "и поведению в структуре веб-страницы — блочные и строчные элементы. "
-                "С помощью блочных элементов можно создавать структуру веб-страницы, строчные элементы"
-                "используются для форматирования текстовых фрагментов (за исключением элементов и других)...",
-        "like_count": 100,
-        "dislike_count": 100
-    } for i in range(2)
-]
+    return render(request, 'index.html', {'content': questions_page, 'popular_tags': popular_tags})
 
 
-def question(request):
-    return render(request, 'one_question_page.html', {'main_questions': main_questions, 'answers': answers})
+def create_ask(request):
+    popular_tags = Tag.objects.popular_tags()
+
+    return render(request, 'ask.html', {'popular_tags': popular_tags})
 
 
-def tag(request):
-    return render(request, 'tag.html', {'questions': questions})
+def question_page(request, pk):
+    question = Question.objects.get(id=pk)
+    answers_page = paginate(Answer.objects.by_question(pk), request, limit=1)
+    popular_tags = Tag.objects.popular_tags()
+
+    return render(request, 'question.html', {'question': question, 'content': answers_page, 'form': form,
+                                             'popular_tags': popular_tags})
 
 
-settings = [
-    {
-        "login": "get_best_mark",
-        "email": "technopark@mail.ru",
-        "nickname": "Agent_007",
-        "avatar_source_img": "C://img"
-    } for i in range(1)
-]
+def hot_questions(request):
+    questions_page = paginate(Question.objects.hot(), request)
+    popular_tags = Tag.objects.popular_tags()
+
+    return render(request, 'index.html', {'content': questions_page, 'popular_tags': popular_tags})
+
+
+def questions_by_tag(request, tag):
+    questions_page = paginate(Question.objects.by_tag(tag), request)
+    popular_tags = Tag.objects.popular_tags()
+
+    return render(request, 'tag.html', {'content': questions_page, 'tag': tag, 'popular_tags': popular_tags})
 
 
 def settings(request):
-    return render(request, 'settings.html', {'settings': settings})
+    setts = Settings.objects.all()
+    popular_tags = Tag.objects.popular_tags()
+
+    return render(request, 'settings.html', {"settings": setts, "popular_tags": popular_tags})
 
 
-def login(request):
-    return render(request, 'login.html')
+def login_view(request):
+
+    return render(request, 'login.html', {'popular_tags': popular_tags})
 
 
 def signup(request):
-    return render(request, 'signup.html')
+
+    return render(request, 'signup.html', {'popular_tags': popular_tags})

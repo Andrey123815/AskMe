@@ -3,48 +3,50 @@
 
 {% block content %}
 
-<div class="row">
-    <h2>Log In</h2>
-</div>
-<div class="row">
-    <div class="col-6">
-        <h4 class="error_password align_center">Sorry, wrong password! Check it again</h4>
+<form method="post">
+    <div class="row">
+        <h2>Log In</h2>
     </div>
-    <div class="col-6"></div>
-</div>
+    <div class="row">
+        <div class="col-6">
+            <h4 class="error_password align_center">Sorry, wrong password! Check it again</h4>
+        </div>
+        <div class="col-6"></div>
+    </div>
 
-<div class="row">
-    <div class="col-2">
-        <h4 class="text_area_articles">Login</h4>
+    <div class="row">
+        <div class="col-2">
+            <h4 class="text_area_articles">Login</h4>
+        </div>
+        <div class="col-8">
+            <input id="enter_login" placeholder="Enter your login.." class="login_password text_area">
+        </div>
     </div>
-    <div class="col-8">
-        <input id="enter_login" placeholder="Enter your login.." class="login_password text_area">
-    </div>
-</div>
 
-<div class="row"></div>
+    <div class="row"></div>
 
-<div class="row">
-    <div class="col-2">
-        <h4 class="text_area_articles">Password</h4>
+    <div class="row">
+        <div class="col-2">
+            <h4 class="text_area_articles">Password</h4>
+        </div>
+        <div class="col-8">
+            <input id="enter_password" placeholder="Enter your password.." class="text_area login_password">
+        </div>
     </div>
-    <div class="col-8">
-        <input id="enter_password" placeholder="Enter your password.." class="text_area login_password">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-3 margin-top-30">
+            <a href="{% url 'signup' %}">
+                <h5>create new account</h5>
+            </a>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4 margin-top-20 align_center">
+            <button id="button_login!" type="submit">Log in!
+            </button>
+        </div>
+        <div class="col-2"></div>
     </div>
-</div>
-<div class="row">
-    <div class="col-1"></div>
-    <div class="col-3 margin-top-30">
-        <a href="{% url 'signup' %}">
-            <h5>create new account</h5>
-        </a>
-    </div>
-    <div class="col-2"></div>
-    <div class="col-4 margin-top-20 align_center">
-        <button id="button_login!" type="submit">Log in!
-        </button>
-    </div>
-    <div class="col-2"></div>
-</div>
+</form>
 
 {% endblock %}
