@@ -1,7 +1,7 @@
 <h2 class="article_popular_tags">Popular tags</h2>
 <h4>
     {% for tag in popular_tags %}
-        <a href="{% url 'tag' tag %}">{{ tag }}</a>
+        <a href="{% url 'question_by_tag' tag %}">{{ tag }}</a>
     {% endfor %}
 </h4>
 <h2 class="article_best_members">Best Members</h2>

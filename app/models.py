@@ -16,7 +16,7 @@ class ProfileManager(models.Manager):
 
 class Profile(models.Model):
     user_id = models.OneToOneField(User, on_delete=models.CASCADE, null=True, verbose_name='Профиль')
-    avatar = models.ImageField(default='img/no_avatar.jpeg', upload_to='avatar/%y/%m/%d', verbose_name='Аватар')
+    avatar = models.ImageField(default='img/no_avatar.jpeg', upload_to='static/avatar/%y/%m/%d', verbose_name='Аватар')
 
     objects = ProfileManager()
 
@@ -71,13 +71,18 @@ class Question(models.Model):
     text = models.TextField(verbose_name='Текст вопроса')
     tags = models.ManyToManyField(Tag, verbose_name='Теги')
     date_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
-    rating = models.IntegerField(default=0, verbose_name='Рейтинг')
     number_of_answers = models.IntegerField(default=0, verbose_name='Количество ответов')
+    rating = models.IntegerField(default=0, verbose_name='Рейтинг')
+    likes_count = models.IntegerField(default=0, verbose_name='Лайки')
+    dislikes_count = models.IntegerField(default=0, verbose_name='Дизлайки')
 
     objects = QuestionManager()
 
     def __str__(self):
         return self.title
+
+    def get_tags(self):
+        return self.tags
 
     class Meta:
         verbose_name = 'Вопрос'

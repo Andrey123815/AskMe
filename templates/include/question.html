@@ -1,8 +1,10 @@
+{% load static %}
+
 <div class="row question_billboard">
     <div class="col-2">
         <div class="avatar">
-            <h5>{{ question.author }}</h5>
-            <img src="static/img/avatar_4.jpg" alt="Dmitrich_006" width="80" height="80">
+            <h5>{{ question.profile_id }}</h5>
+            <img src="{{ question.profile_id.avatar.url }}" width="80" height="80">
         </div>
     </div>
 
@@ -16,42 +18,21 @@
     </div>
 
     <div class="col-1">
-        <a href="{% url 'question' question.id %}" class="answers">#answers({{ question.answers_count }})</a>
+        <a href="{% url 'question' question.id %}" class="answers">#answers({{ question.number_of_answers }})</a>
     </div>
 
     <div class="row">
         <div class="col-1">
             <h5>Tags:</h5>
         </div>
-        <div class="col-9">
-            <a href="{% url 'tag' %}">#success</a>, <a href="{% url 'tag' %}">#technopark</a>, <a
-                href="{% url 'tag' %}">#vk</a>
-            , <a href="{% url 'tag' %}">#study</a>
+        <div class="col-7">
+            {% for tag in question.tags.all %}
+                <a href="{% url 'question_by_tag' tag %}"> #{{ tag }}</a>
+            {% endfor %}
         </div>
-        <div class="col-2">
-            <form method="post">
-                <div class="row">
-                    <button class="like" type="submit" style="margin: 3px;">
-                        <h5>Like</h5>
-                    </button>
-                    <button class="dislike pad-0-4" type="submit" style="margin: 3px;">
-                        <h5>Dislike</h5>
-                    </button>
-                </div>
-            </form>
-
+        <div class="col-4">
+            {% include "include/like_dislike.html" with question_parameters=question%}
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-8"></div>
-        <div class="col-2">
-        </div>
-        <div class="col-1 align_center pad-0-4">
-            <h5 class="like_count">{{ question.like_count }}</h5>
-        </div>
-        <div class="col-1 pad-0-12">
-            <h5 class="dislike_count">{{ question.dislike_count }}</h5>
-        </div>
-    </div>
 </div>

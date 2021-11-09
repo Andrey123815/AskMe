@@ -1,0 +1,24 @@
+<form method="post">
+    <div class="row">
+        <div class="col-8 align_right">
+            <button class="like" type="submit" style="margin: 3px;">
+                <h5>Like</h5>
+            </button>
+        </div>
+        <div class="col-4 align-right">
+            <button class="dislike" type="submit" style="margin: 3px;">
+                <h5>Dislike</h5>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-2 align_left">
+                <h5 class="like_count">{{ question_parameters.likes_count }}</h5>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-2 align_left">
+                <h5 class="dislike_count">{{ question_parameters.dislikes_count }}</h5>
+            </div>
+        </div>
+    </div>
+</form>
