@@ -3,48 +3,6 @@ from django.shortcuts import render
 from app.models import *
 
 
-# def paginate(objects_list, request, limit=2):
-#     paginator = Paginator(objects_list, limit)
-#     page_num = request.GET.get('page')
-#
-#     return paginator.get_page(page_num)
-#
-#
-# def new_questions(request):
-#
-#
-#
-# def index(request):
-#     paginator = Paginator(questions, 5)
-#     page = request.GET.get('page')
-#     content = paginator.get_page(page)
-#     return render(request, 'index.html', {'questions': content})
-#
-#
-# def ask(request):
-#     return render(request, 'ask.html')
-#
-#
-# def question(request):
-#     return render(request, 'one_question_page.html', {'main_questions': main_questions, 'answers': answers})
-#
-#
-# def tag(request):
-#     return render(request, 'tag.html', {'questions': questions})
-#
-#
-# def settings(request):
-#     return render(request, 'settings.html', {'settings': settings})
-#
-#
-# def login(request):
-#     return render(request, 'login.html')
-#
-#
-# def signup(request):
-#     return render(request, 'signup.html')
-
-
 def paginate(objects_list, request, limit=3):
     paginator = Paginator(objects_list, limit)
     page_num = request.GET.get('page')
