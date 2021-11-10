@@ -24,12 +24,12 @@ def create_ask(request):
 
 
 def question_page(request, pk):
-    question = Question.objects.get(id=pk)
-    answers_page = paginate(Answer.objects.by_question(pk), request, limit=1)
+    main_question = Question.objects.get(id=pk)
+    answers_page = paginate(Answer.objects.by_question(pk), request, limit=3)
     popular_tags = Tag.objects.popular_tags()
 
-    return render(request, 'one_question_page.html', {'questions': question, 'content': answers_page,
-                                                      'form': form, 'popular_tags': popular_tags})
+    return render(request, 'one_question_page.html', {'main_question': main_question, 'answers': answers_page,
+                                                      'popular_tags': popular_tags})
 
 
 def hot_questions(request):
@@ -43,7 +43,7 @@ def questions_by_tag(request, tag):
     questions_page = paginate(Question.objects.by_tag(tag), request)
     popular_tags = Tag.objects.popular_tags()
 
-    return render(request, 'question_by_tag.html', {'content': questions_page, 'tag': tag,
+    return render(request, 'question_by_tag.html', {'questions': questions_page, 'tag': tag,
                                                     'popular_tags': popular_tags})
 
 
@@ -60,5 +60,6 @@ def login_view(request):
 
 
 def signup(request):
+    popular_tags = Tag.objects.popular_tags()
 
     return render(request, 'signup.html', {'popular_tags': popular_tags})

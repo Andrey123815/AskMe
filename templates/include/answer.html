@@ -2,30 +2,25 @@
     <div class="col-2">
         <div class="avatar">
             <h5>{{ answer.author }}</h5>
-            <img src="static/img/avatar_3.jpg" alt="Ivan_cher_556" width="80" height="80">
+            <img src="{{ answer.profile_id.avatar.url }}" width="80" height="80">
         </div>
     </div>
 
-    <div class="col-8 question_text">
+    <div class="col-6 question_text">
         {{ answer.text }}
     </div>
 
-    <div class="col-2">
-        <button class="like" type="submit" style="margin-top: 5px;">
-            <h5>Like</h5>
-        </button>
-        <button class="dislike" type="submit" style="margin-top: 5px;">
-            <h5>Dislike</h5>
-        </button>
-        <div class="row">
-            <div class="col-6 align_center pad-4-4-0-4">
-                <h5 class="like_count">{{ answer.like_count }}</h5>
-            </div>
-            <div class="col-6 pad-4-4-0-4">
-                <h5 class="dislike_count">{{ answer.dislike_count }}</h5>
-            </div>
-        </div>
+    <div class="col-4">
+        {% include "include/like_dislike.html" with question_parameters=answer%}
     </div>
+
+    <!--    <div class="row">-->
+    <!--        <div class="col-8"></div>-->
+    <!--        <div class="col-4">-->
+    <!--            {% include "include/like_dislike.html" with question_parameters=question%}-->
+    <!--        </div>-->
+    <!--    </div>-->
+
     <div class="row">
         <div class="col-10"></div>
         <div class="col-2 align_right">

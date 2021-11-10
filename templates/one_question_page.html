@@ -3,9 +3,9 @@
 
 {% block content %}
 
-{% for main_question in main_questions%}
+{% block main_question %}
     {% include 'include/main_question.html' %}
-{% endfor %}
+{% endblock %}
 
 <div class="col-12 break_line"></div>
 

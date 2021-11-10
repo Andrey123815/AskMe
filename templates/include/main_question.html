@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-2">
         <div class="avatar">
-            <h4 style="margin-top: 0px;">{{ main_question.author }}</h4>
-            <img src="static/img/avatar_4.jpg" alt="Dmitrich_006" width="120" height="120">
+            <h4 style="margin-top: 0px;">{{ main_question.profile_id }}</h4>
+            <img src="{{ main_question.profile_id.avatar.url }}" alt="Dmitrich_006" width="100" height="100">
         </div>
     </div>
     <div class="col-10">
@@ -18,23 +18,13 @@
             <div class="col-1">
                 <h5>Tags:</h5>
             </div>
-            <div class="col-5">
-                <h5>
-                    <a href="{% url 'tag' %}">#success</a>, <a href="{% url 'tag' %}">#technopark</a>, <a
-                        href="{% url 'tag' %}">#vk</a>
-                    , <a href="{% url 'tag' %}">#study</a>
-                </h5>
+            <div class="col-7">
+                {% for tag in main_question.tags.all %}
+                    <a href="{% url 'question_by_tag' tag %}"> #{{ tag }}</a>
+                {% endfor %}
             </div>
-            <div class="col-3"></div>
-            <div class="col-3">
-                <div class="align_center">
-                    <button class="like" type="submit">
-                        <h5>Like</h5>
-                    </button>
-                    <button class="dislike" type="submit">
-                        <h5>Dislike</h5>
-                    </button>
-                </div>
+            <div class="col-4">
+                {% include "include/like_dislike.html" with question_parameters=main_question%}
             </div>
         </div>
 

@@ -101,6 +101,8 @@ class Answer(models.Model):
     is_correct = models.BooleanField(default=False, verbose_name='Корректность ответа')
     date_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     rating = models.IntegerField(default=0, verbose_name='Рейтинг')
+    likes_count = models.IntegerField(default=0, verbose_name='Лайки')
+    dislikes_count = models.IntegerField(default=0, verbose_name='Дизлайки')
 
     objects = AnswerManager()
 
@@ -141,8 +143,10 @@ class LikeQuestion(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             if self.is_like:
+                self.question_id.likes_count += 1
                 self.question_id.rating += 1
             else:
+                self.question_id.dislikes_count += 1
                 self.question_id.rating -= 1
             self.question_id.save()
         super(LikeQuestion, self).save(*args, **kwargs)
@@ -150,8 +154,10 @@ class LikeQuestion(models.Model):
 
     def delete(self, *args, **kwargs):
         if self.is_like:
+            self.question_id.likes_count -= 1
             self.question_id.rating -= 1
         else:
+            self.question_id.dislike_count -= 1
             self.question_id.rating += 1
         self.question_id.save()
         super(LikeQuestion, self).delete(*args, **kwargs)
@@ -159,8 +165,12 @@ class LikeQuestion(models.Model):
 
     def change_mind(self):
         if self.is_like:
+            self.question_id.like_count -= 1
+            self.question_id.dislike_count += 1
             self.question_id.rating -= 2
         else:
+            self.question_id.like_count += 1
+            self.question_id.dislike_count -= 1
             self.question_id.rating += 2
         self.is_like = not self.is_like
         self.save()
@@ -187,8 +197,10 @@ class LikeAnswer(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             if self.is_like:
+                self.answer_id.likes_count += 1
                 self.answer_id.rating += 1
             else:
+                self.answer_id.dislikes_count += 1
                 self.answer_id.rating -= 1
             self.answer_id.save()
         super(LikeAnswer, self).save(*args, **kwargs)
@@ -196,8 +208,10 @@ class LikeAnswer(models.Model):
 
     def delete(self, *args, **kwargs):
         if self.is_like:
+            self.answer_id.likes_count -= 1
             self.answer_id.rating -= 1
         else:
+            self.answer_id.dislikes_count -= 1
             self.answer_id.rating += 1
         self.answer_id.save()
         super(LikeAnswer, self).delete(*args, **kwargs)
@@ -205,8 +219,12 @@ class LikeAnswer(models.Model):
 
     def change_mind(self):
         if self.is_like:
+            self.answer_id.likes_count -= 1
+            self.answer_id.dislikes_count += 1
             self.answer_id.rating -= 2
         else:
+            self.answer_id.likes_count += 1
+            self.answer_id.dislikes_count -= 1
             self.answer_id.rating += 2
         self.is_like = not self.is_like
         self.save()
