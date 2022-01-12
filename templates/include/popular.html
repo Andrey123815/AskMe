@@ -1,0 +1,18 @@
+<h2 class="article_popular_tags">Popular tags</h2>
+<h4>
+    {% for tag in popular_tags %}
+        <a href="{% url 'question_by_tag' tag %}">{{ tag }}</a>
+    {% endfor %}
+</h4>
+<h2 class="article_best_members">Best Members</h2>
+<h4>
+    <div class="row">
+        <a class="best_members" href="google.com">Dmitrich_006</a>
+    </div>
+    <div class="row">
+        <a class="best_members" href="google.com">Agent_007</a>
+    </div>
+    <div class="row">
+        <a class="best_members" href="google.com">Ivancher_556</a>
+    </div>
+</h4>

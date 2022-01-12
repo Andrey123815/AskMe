@@ -1,0 +1,33 @@
+<div class="row question_billboard">
+    <div class="col-2">
+        <div class="avatar">
+            <h5>{{ answer.author }}</h5>
+            <img src="{{ answer.profile_id.avatar.url }}" width="80" height="80">
+        </div>
+    </div>
+
+    <div class="col-6 question_text">
+        {{ answer.text }}
+    </div>
+
+    <div class="col-4">
+        {% include "include/like_dislike.html" with question_parameters=answer%}
+    </div>
+
+    <!--    <div class="row">-->
+    <!--        <div class="col-8"></div>-->
+    <!--        <div class="col-4">-->
+    <!--            {% include "include/like_dislike.html" with question_parameters=question%}-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+    <div class="row">
+        <div class="col-10"></div>
+        <div class="col-2 align_right">
+            <div>
+                <input type="checkbox" name="correct_answer" checked>
+                <label>Correct</label>
+            </div>
+        </div>
+    </div>
+</div>

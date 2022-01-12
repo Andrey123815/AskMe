@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-2">
+        <div class="avatar">
+            <h4 style="margin-top: 0px;">{{ main_question.profile_id }}</h4>
+            <img src="{{ main_question.profile_id.avatar.url }}" alt="Dmitrich_006" width="100" height="100">
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="row">
+            <h3>{{ main_question.title }}</h3>
+        </div>
+        <div class="row question_text">
+            <h6>
+                {{ main_question.text }}
+            </h6>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h5>Tags:</h5>
+            </div>
+            <div class="col-7">
+                {% for tag in main_question.tags.all %}
+                    <a href="{% url 'question_by_tag' tag %}"> #{{ tag }}</a>
+                {% endfor %}
+            </div>
+            <div class="col-4">
+                {% include "include/like_dislike.html" with question_parameters=main_question%}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-9"></div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="like_count align_right margin_like_count">{{ main_question.like_count }}</h5>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="dislike_count">{{ main_question.dislike_count }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

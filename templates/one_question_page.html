@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} Log In {% endblock %}
+
+{% block content %}
+
+{% block main_question %}
+    {% include 'include/main_question.html' %}
+{% endblock %}
+
+<div class="col-12 break_line"></div>
+
+{% for answer in answers%}
+    {% include 'include/answer.html' %}
+{% endfor %}
+
+<div class="col-12 break_line"></div>
+
+<div class="col-12">
+    <textarea class="new_text_area" name="answer_text_area" id="answer_text_area"
+                                  placeholder="Enter your answer here.."></textarea>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <button type="submit" id="post_answer" class="button_answer">
+            Answer
+        </button>
+    </div>
+</div>
+
+{% endblock %}

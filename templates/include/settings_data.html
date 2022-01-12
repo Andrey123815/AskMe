@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-2">
+        <h2>Settings:</h2>
+    </div>
+    <div class="col-10">
+        <h2>{{ settings.nickname }}</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h4 class="text_area_articles">Login</h4>
+    </div>
+    <div class="col-8">
+        <form action="" method="post">
+            <input id="input_new_login" placeholder="Enter your login..." value={{ setting.login }}
+                   class="text_area login_password">
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h4 class="text_area_articles">Email</h4>
+    </div>
+    <div class="col-8">
+        <form action="" method="post">
+            <input id="input_new_email" placeholder="Enter your email..." value={{ setting.email }}
+                   class="text_area login_password">
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h4 class="text_area_articles">Nickname</h4>
+    </div>
+    <div class="col-8">
+        <form action="" method="post">
+            <input id="input_new_nickname" placeholder="Enter your nickname.." value={{ setting.nickname }}
+                   class="text_area login_password">
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h4 class="upload_avatar">Upload img</h4>
+    </div>
+    <div class="col-8">
+        <div class="row">
+            <div class="col-12">
+                <form action="" method="post">
+                    <input type="file" id="input_new_avatar" placeholder="Enter your source img path..."
+                           value={{ setting.avatar_source_img }}
+                           class="text_area login_password avatar_path">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 align_right">
+        <img src="static/img/avatar_5.png" width="120px" height="120px" class="break_line">
+    </div>
+    <div class="col-2"></div>
+    <div class="col-7">
+        <button type="submit" class="button_save_changes">
+            Save changes
+        </button>
+    </div>
+</div>

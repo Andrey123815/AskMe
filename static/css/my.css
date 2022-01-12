@@ -1,0 +1,330 @@
+main > .my_container {
+    padding: 80px 15px 0;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.question_text {
+    max-width: 750px;
+}
+
+.like {
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: auto;
+    width: 60px;
+    height: 30px;
+    color: black;
+    background: green;
+}
+
+.dislike {
+    border: 2px solid black;
+    border-radius: 6px;F
+    padding: auto;
+    width: 75px;
+    height: 30px;
+    color: black;
+    background: red;
+}
+
+.avatar {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.article_popular_tags {
+    text-align: center;
+    margin: 15px 0px 20px 10px
+}
+
+.popular_tags {
+    margin: 80px 10px;
+    padding: auto;
+}
+
+.article_best_members {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.best_members {
+    text-align: center;
+    margin: 10px 0px
+}
+
+.break_line {
+    margin: 10px 0px;
+    border: 6px solid gray;
+}
+
+.text_area {
+    width: 80%;
+    height: 50%;
+    overflow : auto;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+.like:focus {
+    color: white;
+}
+
+.dislike:focus {
+    color: white;
+}
+
+.like_count {
+    color: green;
+}
+
+.dislike_count {
+    color: red;
+}
+
+.text_area_articles {
+    margin: 30px 0px 10px 30px;
+}
+
+.upload_avatar {
+    margin: 30px 0px 0px 0px;
+}
+
+.avatar_path {
+    width: 80%;
+}
+
+.articles_without_margin {
+    margin: 30px 0px 10px 0px;
+}
+
+#button_question_push {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    vertical-align: middle;
+    max-width: 150px;
+    background: #b85f1c;
+    color: white;
+    border-radius: 3px;
+}
+
+.title_margin {
+    margin: 15px 0px;
+}
+
+.input_source_img_path {
+    margin: 0px 0px 10px 0px;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+.button_choose {
+    margin: 3px;
+}
+
+.buttons {
+    margin: 3px 3px 3px 60px;
+    max-width: 150px;
+}
+
+.login_register {
+    font-size: 20px;
+}
+
+.question_billboard {
+    margin: 20px 0px;
+    padding: 5px;
+    border: 3px solid gray;
+    border-radius: 10px
+}
+
+.form_page {
+    margin: 0px 5px 0px 500px;
+    padding: 5px;
+}
+
+.page_buttons {
+    padding: 5px;
+    background: white;
+    color: blue;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.answers {
+    margin: auto;
+    padding: auto;
+}
+
+h4 {
+    text-align: right;
+    margin: 30px 0px 10px 0px;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.align_center {
+    text-align: center;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-26 {
+    font-size: 32px;
+}
+
+.font-32 {
+    font-size: 32px;
+}
+
+.title_row_padding {
+    padding: 40px 20px 5px 60px;
+}
+
+#text_form {
+    height: 300px;
+}
+
+h4 > a {
+    margin: 10px;
+}
+
+.margin-0-10 {
+    margin: 0px 10px;
+}
+
+.error_password {
+    color: red;
+}
+
+.new_account {
+    margin: 30px 0px 0px 80px;
+}
+
+.login_password {
+    margin: 30px 0px 0px 0px
+}
+
+.margin-top-20 {
+    margin-top: 25px;
+    padding-right: 50px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+#button_login\! {
+     color: white;
+     background: green;
+     width: 100px;
+}
+
+.search_tag {
+    margin: 0px 0px 0px 20px;
+    color: #6d32a8;
+}
+
+.pad-0-4 {
+    padding: 0px 4px;
+}
+
+.pad-0-12 {
+    padding: 0px 4px 0px 12px;
+}
+
+.graph_answer_post {
+    margin: 3px;
+    padding: 3px;
+    border: 3px solid gray;
+    border-radius: 8px;
+}
+
+.margin_like_count {
+    margin-right: 9px;
+}
+
+.pad-4-4-0-4 {
+    padding: 4px 4px 0px 4px;
+}
+
+.new_text_area {
+    width: 100%;
+    height: 50%;
+    overflow : auto;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+.settings_text_area {
+    width: 100%;
+    height: 50%;
+    vertical-align: center;
+    overflow : auto;
+    border: 3px solid gray;
+    border-radius: 5px;
+    /*width: 430px;*/
+}
+
+.button_answer {
+    vertical-align: middle;
+   margin: 7px 400px;
+   width: 200px;
+   background: green;
+   color: white;
+   height: 40px;
+}
+
+.error_email_registered {
+    color: red;
+    margin: 40px;
+}
+
+.margin-top-0 {
+    margin-top: 0px;
+}
+
+.margin_bottom {
+    margin: 0px 0px 15px auto;
+}
+
+.button_register {
+    margin: 15px 0px 0px 0px;
+    width: 150px;
+    background: green;
+    color: white"
+}
+
+.text_confirm {
+    margin-top: 15px;
+    width: 80%;
+}
+
+.button_save_changes {
+    vertical-align: middle;
+    margin: 35px 20px 20px 10px;
+    width: 180px;
+    background: green;
+    color: white;
+}
+
+.margin-top-3 {
+    margin-top: 3px;
+}
+
+.margin-10 {
+    margin: 40px 0px 40px 0px;
+}
+
+.align-left {
+    text-align: left;
+}
